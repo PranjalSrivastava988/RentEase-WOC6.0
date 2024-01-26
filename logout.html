@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentEase - Logout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 15px 80px;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #e3d7d7;
+      text-decoration: none;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #302f49;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #f3efef;
+      padding: 15px 20px;
+    }
+
+    .nav-items a:hover {
+      background-color: #edebed;
+      color: #302f49;
+    }
+
+    /* CSS for main element */
+    .logout {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      padding: 40px 80px;
+    }
+
+    .logout h1 {
+      font-size: 36px;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    .logout p {
+      font-size: 18px;
+      color: #585858;
+      margin-bottom: 40px;
+    }
+
+    .logout button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .logout button:hover {
+      background-color: #4ab0c4;
+    }
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 15px 80px;
+      margin-top: 20px;
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 16px;
+      color: #fff;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="dashboard.html" class="logo">RentEase</a>
+    <nav class="nav-items">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="myitems.html">My Items</a>
+      <a href="myrentals.html">My Rentals</a>
+      <a href="profile.html">Profile</a>
+      <a href="logout.html" class="logout-btn">Logout</a>
+    </nav>
+  </header>
+
+  <main class="logout">
+    <h1>Logout</h1>
+    <p>Are you sure you want to log out?</p>
+    <button id="logoutBtn">Logout</button>
+  </main>
+
+  <footer class="footer">
+    <div class="copy">&copy; RentEase - Your Campus Rental Solution</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.facebook.com/" target="_main"><i class="fab fa-facebook"></i> RentEase India</a>
+        <a href="https://www.twitter.com/" target="_main"><i class="fab fa-twitter"></i> RentEase Ltd.</a>
+        <a href="https://www.instagram.com/" target="_main"><i class="fab fa-instagram"></i> RentEase India Ltd.</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function () {
+      // Perform logout logic here
+      alert('Logout Successful!');
+      // Redirect to the login page
+      window.location.href = 'login.html';
+    });
+  </script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCpDrwyrQYVl2Jd4UGZzHFure-s_uVy_CM",
+  authDomain: "rentease-21dd1.firebaseapp.com",
+  projectId: "rentease-21dd1",
+  storageBucket: "rentease-21dd1.appspot.com",
+  messagingSenderId: "318499391560",
+  appId: "1:318499391560:web:c70291d673635e1d14307d",
+  measurementId: "G-J0LEJ8LM9Q"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth(app);
+</script>
+<script src="logout.js"></script>
+</body>
+
+</html>

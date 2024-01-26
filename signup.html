@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentEase - Your Campus Rental Solution</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #e3d7d7;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #302f49;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+
+      color: #f3efef;
+      padding: 35px 20px;
+    }
+
+    .nav-items a:hover {
+      background-color: #edebed;
+      color: #302f49;
+    }
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("image1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .signup {
+      background-color: #302f49;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px #302f49(0, 0, 0, 0.1);
+      margin: 2em auto;
+      max-width: 400px;
+
+    }
+
+    .signup h2 {
+      color: #e3d7d7;
+      text-align: center;
+    }
+
+    .signup form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .signup label {
+      margin-bottom: 0.5em;
+      font-weight: bold;
+      color: #f4f0f0;
+    }
+
+    .signup input {
+      padding: 0.8em;
+      margin-bottom: 1em;
+      border: 1px solid #050404;
+      border-radius: 4px;
+    }
+
+    .signup button {
+      background-color: #080808;
+      color: #fff;
+      padding: 0.8em;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup button:hover {
+      background-color: #0a2030;
+    }
+
+    .signup p {
+      margin-top: 1em;
+      font-size: 1.2em;
+      text-align: center;
+      color: #f46d6d;
+    }
+
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 40px 80px;
+    }
+
+    .footer img {
+      width: 250px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">RentEase</a>
+    <nav class="nav-items">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="policy.html">Policy</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+  </header>
+  <main>
+
+    <div class="intro">
+      <h1>RentEase - Your Campus Rental Solution</h1>
+      <p>The ultimate solution for hassle-free borrowing and lending within your campus community.</p>
+
+    </div>
+    <section class="signup">
+      <div class="container">
+        <h2>RentEase Sign-Up</h2>
+        <form id="signupform" action="signup.html">
+          <label for="username">Username(as provided to college):</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="email id">College Email ID:</label>
+          <input type="text" id="email" name="email id" required>
+
+          <label for="contact">Registered Contact Number:</label>
+          <input type="text" id="contact" name="contact" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+      </div>
+    </section>
+
+
+
+  </main>
+  <footer class="footer">
+    <div class="copy">
+      <img src="logo.png" alt="about-us"> <br><br>
+      &copy RentEase - Your Campus Rental Solution
+    </div>
+
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.facebook.com/" target="_main"><i class="fab fa-facebook"></i> RentEase India</a>
+        <a href="https://www.twitter.com/" target="_main"><i class="fab fa-twitter"></i> RentEase Ltd.</a>
+        <a href="https://www.instagram.com/" target="_main"><i class="fab fa-instagram"></i> RentEase India Ltd.</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <script src="signup.js"></script>
+</body>
+
+</html>
